@@ -1,0 +1,1 @@
+const Reviews = () => <div className="p-8 text-white text-2xl">Reviews Management</div>; export default Reviews;
