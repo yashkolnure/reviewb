@@ -8,7 +8,7 @@ const Overview = ({ user }) => {
     try {
       const token = localStorage.getItem('token');
       // Step 1: Get the OAuth URL from backend
-      const res = await axios.get(`http://localhost:5000/api/auth/google/url?userId=${user._id}`, {
+      const res = await axios.get(`/api/auth/google/url?userId=${user._id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       // Step 2: Redirect to Google

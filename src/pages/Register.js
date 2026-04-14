@@ -36,7 +36,7 @@ const Register = () => {
     setIsSubmitting(true);
     try {
       // Direct call as requested, to your backend route
-      await axios.post('http://localhost:5000/api/auth/register', formData);
+      await axios.post('/api/auth/register', formData);
       alert("Registration Successful! Please login.");
       navigate('/login'); // Redirect to login page on success
     } catch (err) {

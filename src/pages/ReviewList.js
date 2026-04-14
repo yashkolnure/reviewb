@@ -8,7 +8,7 @@ const ReviewList = () => {
 
   const fetchReviews = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/reviews/YOUR_BUSINESS_ID', {
+      const res = await axios.get('/api/reviews/YOUR_BUSINESS_ID', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setReviews(res.data);
@@ -19,7 +19,7 @@ const ReviewList = () => {
 
   const handleAiReply = async (reviewId, comment, rating) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/ai/generate', 
+      const res = await axios.post('/api/ai/generate', 
         { comment, rating },
         { headers: { Authorization: `Bearer ${token}` } }
       );
